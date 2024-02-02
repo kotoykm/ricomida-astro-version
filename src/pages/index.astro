@@ -1,16 +1,83 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Carousel from "../components/Carousel.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import Recipes from "../components/Recipes.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Ricomida">
+
+	<section class="container mt-lg-5">
+		<Header/>
+	</section>
+
+
+	<section class="container d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
+		<Carousel
+			picture1="src/img/slider-1.png"
+			picture2="src/img/slider-2.png"
+			picture3="src/img/slider-3.png"
+			picture4="src/img/slider-4.png"
+			picture5="src/img/slider-5.png"
+			picture6="src/img/slider-6.png"
+			picture7="src/img/slider-7.png"
+			picture8="src/img/slider-8.png"
+			idtarget="carrusel-ricomida"
+		/>
+	</section>
+
+
+	<section class="container mt-5 mt-lg-3">
+		<Recipes/>
+	</section>
+
+
+
+	<!-- <section class="container d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
+		<Carousel
+			picture1="https://i.pinimg.com/564x/50/7c/58/507c58de705b1131bfbe3f68323bf28a.jpg"
+			picture2="https://i.pinimg.com/564x/ea/1c/04/ea1c043e3fd6f114f7496e136561c319.jpg"
+			picture3="https://i.pinimg.com/736x/ee/f6/32/eef632a4616acb13858fa45ff177ff22.jpg"
+			picture4="https://i.pinimg.com/564x/07/d0/e3/07d0e3109935ca25e0554aeb332c0709.jpg"
+			picture5="https://i.pinimg.com/564x/1d/0a/9a/1d0a9afb2815777d6fed5b862ff4e9f7.jpg"
+			picture6="https://i.pinimg.com/564x/64/c3/78/64c37829b89fc80f0c5ac18f7a6b0505.jpg"
+			picture7="https://i.pinimg.com/564x/28/71/cc/2871cc3cc767e49a9db48ba5f12d476f.jpg"
+			picture8="https://i.pinimg.com/564x/37/10/72/3710725452f795631f165b123548c50c.jpg"
+			idtarget="carrousel-anime"
+		/>
+	</section> -->
+
+	<section id="card-seccion" class="container mt-5 mt-lg-3 my-5 mb-5">
+		<div class="row me-5 ms-5">
+			<h1 class="col-12 text-center fw-bold mb-5 mt-2"></h1>
+			<div class="col-xs-12 col-md-6 col-lg-4">
+
+				<Card
+					image="src/img/recipe-card-1.png"
+					title="RECETAS RELACIONADAS"
+					text="Mus enim elementum dignissim class eleifend justo, ut nunc magnis est vulputate nostra, blandit erat luctus faucibus orci."
+				/>
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-4">
+
+				<Card
+					image="src/img/recipe-card-2.png"
+					title="TIRAMISÚ"
+					text="Congue fermentum dignissim rhoncus elementum ac nisi, proin phasellus lacinia sed faucibus mauris, taciti scelerisque nulla ornare consequat."
+				/>
+
+			</div>
+			<div class="col-xs-12 col-md-6 col-lg-4">
+
+				<Card
+					image="src/img/recipe-card-3.png"
+					title="PLATEADA"
+					text="Cubilia elementum posuere arcu rhoncus egestas lectus, diam aliquam laoree ac eleifend risus, urna auctor inceptos mattis dapibus."
+				/>
+
+			</div>
+
+		</div>
+	</section>
+</Layout>

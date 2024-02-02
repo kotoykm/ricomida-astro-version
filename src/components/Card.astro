@@ -1,0 +1,23 @@
+---
+interface Props {
+    image: string;
+    title: string;
+    text: string;
+}
+
+const { image, title, text } = Astro.props;
+---
+
+<div class="card mb-3 mb-lg-0">
+    <img src={image} class="card-img-top" alt="card-1">
+    <div class="card-body">
+        <h5 class="card-title fs-4 fw-bold card-titulo">{title}</h5>
+        <p class="card-text">{text}</p>
+    </div>
+</div>
+
+<style>
+    .card{
+		/* height: 24rem; */
+	}
+</style>

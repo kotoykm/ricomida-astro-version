@@ -1,3 +1,8 @@
 {
-  "extends": "astro/tsconfigs/base"
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["dom", "ES6"],
+    "types": ["jquery"]
+    }
 }
